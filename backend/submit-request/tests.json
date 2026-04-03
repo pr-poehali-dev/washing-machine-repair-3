@@ -1,0 +1,12 @@
+{
+  "tests": [
+    {
+      "name": "Отправка заявки",
+      "method": "POST",
+      "path": "/",
+      "body": {"name": "Иван", "phone": "+79131916828"},
+      "expectedStatus": 200,
+      "bodyMatcher": "none"
+    }
+  ]
+}
