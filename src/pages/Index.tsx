@@ -79,10 +79,10 @@ export default function Index() {
           </div>
           <a
             href="tel:+79131916828"
-            className="flex items-center gap-2 bg-[#ff5f1f] hover:bg-[#e54e0e] transition-colors px-3 py-2 rounded-lg text-sm font-semibold text-white"
+            className="flex items-center gap-1.5 bg-[#ff5f1f] hover:bg-[#e54e0e] transition-colors px-3 py-2 rounded-lg text-xs sm:text-sm font-semibold text-white"
           >
-            <Icon name="Phone" size={14} />
-            <span className="hidden sm:inline">+7 913 191-68-28</span>
+            <Icon name="Phone" size={13} />
+            +7 913 191-68-28
           </a>
         </div>
       </nav>
