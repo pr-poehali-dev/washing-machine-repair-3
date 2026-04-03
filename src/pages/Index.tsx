@@ -73,7 +73,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-lg bg-[#ff5f1f] flex items-center justify-center">
               <Icon name="Wrench" size={16} className="text-white" />
             </div>
-            <span className="font-oswald text-lg font-bold tracking-wide">СТИРМАСТЕР</span>
+            <span className="font-oswald text-lg font-bold tracking-wide">ТЕХНАДЕЖНО</span>
           </div>
           <a
             href="tel:+79131916828"
@@ -274,7 +274,7 @@ export default function Index() {
                 <Icon name="Award" size={30} className="text-white" />
               </div>
               <div>
-                <div className="font-oswald text-2xl font-bold mb-1">Гарантийный талон</div>
+                <div className="font-oswald text-2xl font-bold mb-1">Гарантийный талон от ТехНадежно</div>
                 <div className="text-white/50 text-sm">После каждого ремонта выдаём официальный документ с подписью мастера</div>
               </div>
             </div>
@@ -341,9 +341,9 @@ export default function Index() {
             <div className="w-7 h-7 rounded-lg bg-[#ff5f1f] flex items-center justify-center">
               <Icon name="Wrench" size={14} className="text-white" />
             </div>
-            <span className="font-oswald font-bold tracking-wide">СТИРМАСТЕР</span>
+            <span className="font-oswald font-bold tracking-wide">ТЕХНАДЕЖНО</span>
           </div>
-          <p className="text-white/30 text-sm">© 2026 СтирМастер. Профессиональный ремонт стиральных машин</p>
+          <p className="text-white/30 text-sm">© 2026 ТехНадежно. Профессиональный ремонт стиральных машин</p>
         </div>
       </footer>
     </div>
