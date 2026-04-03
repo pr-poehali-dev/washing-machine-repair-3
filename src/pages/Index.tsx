@@ -198,7 +198,7 @@ export default function Index() {
           <div className="mt-8 text-center">
             <p className="text-white/40 text-sm mb-4">Не нашли свою неисправность?</p>
             <a
-              href="tel:+78001234567"
+              href="tel:+79131916828"
               className="inline-flex items-center gap-2 text-[#ff5f1f] hover:text-[#ff7a47] font-semibold transition-colors"
             >
               Позвоните — поможем разобраться
