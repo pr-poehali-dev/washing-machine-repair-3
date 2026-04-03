@@ -73,7 +73,7 @@ export default function Index() {
             <div className="w-8 h-8 rounded-lg bg-[#ff5f1f] flex items-center justify-center">
               <Icon name="Wrench" size={16} className="text-white" />
             </div>
-            <span className="font-oswald text-lg font-bold tracking-wide">ТЕХНАДЕЖНО</span>
+            <span className="font-oswald text-lg font-bold tracking-wide">ТехНадежно</span>
           </div>
           <a
             href="tel:+79131916828"
@@ -341,7 +341,7 @@ export default function Index() {
             <div className="w-7 h-7 rounded-lg bg-[#ff5f1f] flex items-center justify-center">
               <Icon name="Wrench" size={14} className="text-white" />
             </div>
-            <span className="font-oswald font-bold tracking-wide">ТЕХНАДЕЖНО</span>
+            <span className="font-oswald font-bold tracking-wide">ТехНадежно</span>
           </div>
           <p className="text-white/30 text-sm">© 2026 ТехНадежно. Профессиональный ремонт стиральных машин</p>
         </div>
