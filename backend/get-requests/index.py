@@ -1,6 +1,9 @@
 import json
 import os
 import psycopg2
+from datetime import timezone, timedelta
+
+KRASNOYARSK = timezone(timedelta(hours=7))
 
 
 def handler(event: dict, context) -> dict:
@@ -44,7 +47,7 @@ def handler(event: dict, context) -> dict:
             'name': r[1],
             'phone': r[2],
             'message': r[3] or '',
-            'created_at': r[4].strftime('%d.%m.%Y %H:%M') if r[4] else ''
+            'created_at': r[4].replace(tzinfo=timezone.utc).astimezone(KRASNOYARSK).strftime('%d.%m.%Y %H:%M') if r[4] else ''
         }
         for r in rows
     ]
