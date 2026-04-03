@@ -55,98 +55,7 @@ const guarantees = [
 
 const brands = ["Samsung", "LG", "Bosch", "Indesit", "Candy", "Whirlpool", "Haier", "Beko", "Ariston", "Zanussi"];
 
-function FormBlock() {
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle");
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    try {
-      const res = await fetch("https://functions.poehali.dev/19ea749f-1c6a-46c6-a786-a883bd8a2437", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, phone }),
-      });
-      if (res.ok) {
-        setStatus("success");
-        setName("");
-        setPhone("");
-      } else {
-        setStatus("error");
-      }
-    } catch {
-      setStatus("error");
-    }
-  };
-
-  if (status === "success") {
-    return (
-      <div className="rounded-2xl bg-gradient-to-br from-[#ff5f1f]/15 to-transparent border border-[#ff5f1f]/30 p-10 text-center">
-        <div className="w-16 h-16 rounded-full bg-[#ff5f1f]/20 flex items-center justify-center mx-auto mb-4">
-          <Icon name="CheckCircle" size={32} className="text-[#ff5f1f]" />
-        </div>
-        <h3 className="font-oswald text-2xl font-bold mb-2">Заявка принята!</h3>
-        <p className="text-white/50">Иван перезвонит вам в течение 15 минут</p>
-        <button
-          onClick={() => setStatus("idle")}
-          className="mt-6 text-[#ff5f1f] hover:text-[#ff7a47] text-sm font-medium transition-colors"
-        >
-          Отправить ещё одну заявку
-        </button>
-      </div>
-    );
-  }
-
-  return (
-    <form onSubmit={handleSubmit} className="rounded-2xl bg-white/4 border border-white/8 p-8 flex flex-col gap-4">
-      <div>
-        <label className="block text-white/60 text-sm mb-2">Ваше имя</label>
-        <input
-          type="text"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder="Иван"
-          required
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-[#ff5f1f]/50 transition-colors"
-        />
-      </div>
-      <div>
-        <label className="block text-white/60 text-sm mb-2">Номер телефона</label>
-        <input
-          type="tel"
-          value={phone}
-          onChange={e => setPhone(e.target.value)}
-          placeholder="+7 900 000-00-00"
-          required
-          className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3.5 text-white placeholder-white/25 focus:outline-none focus:border-[#ff5f1f]/50 transition-colors"
-        />
-      </div>
-      {status === "error" && (
-        <p className="text-red-400 text-sm">Что-то пошло не так. Попробуйте ещё раз или позвоните нам.</p>
-      )}
-      <button
-        type="submit"
-        disabled={status === "loading"}
-        className="mt-2 flex items-center justify-center gap-3 bg-[#ff5f1f] hover:bg-[#e54e0e] disabled:opacity-60 transition-all px-8 py-4 rounded-xl text-white font-bold text-lg shadow-[0_0_40px_rgba(255,95,31,0.3)]"
-      >
-        {status === "loading" ? (
-          <>
-            <Icon name="Loader2" size={20} className="animate-spin" />
-            Отправляем...
-          </>
-        ) : (
-          <>
-            <Icon name="Send" size={20} />
-            Жду звонка
-          </>
-        )}
-      </button>
-      <p className="text-white/25 text-xs text-center">Нажимая кнопку, вы соглашаетесь на обработку персональных данных</p>
-    </form>
-  );
-}
 
 export default function Index() {
   const [visible, setVisible] = useState(false);
@@ -399,20 +308,6 @@ export default function Index() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* FORM */}
-      <section className="py-24 relative">
-        <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#ff5f1f]/30 to-transparent" />
-        <div className="max-w-2xl mx-auto px-4 md:px-8">
-          <div className="text-center mb-10">
-            <div className="text-[#ff5f1f] text-sm font-semibold uppercase tracking-[0.2em] mb-3">Обратный звонок</div>
-            <h2 className="font-oswald text-4xl md:text-5xl font-bold">ОСТАВЬТЕ ЗАЯВКУ</h2>
-            <p className="text-white/50 mt-3">Иван перезвонит в течение 15 минут</p>
-          </div>
-
-          <FormBlock />
         </div>
       </section>
 
