@@ -10,7 +10,7 @@ const services = [
     time: "1–2 часа",
   },
   {
-    icon: "Droplets",
+    icon: "Waves",
     title: "Течёт вода",
     desc: "Замена манжеты, сливного шланга, помпы, бака",
     price: "от 1 200 ₽",
@@ -31,7 +31,7 @@ const services = [
     time: "1–3 часа",
   },
   {
-    icon: "Thermometer",
+    icon: "Flame",
     title: "Не греет воду",
     desc: "Замена нагревательного элемента (ТЭН), термостата",
     price: "от 890 ₽",
