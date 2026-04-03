@@ -53,7 +53,7 @@ const guarantees = [
   { icon: "RefreshCw", title: "Бесплатный повторный выезд", desc: "Если неисправность повторилась — устраним бесплатно" },
 ];
 
-const brands = ["Samsung", "LG", "Bosch", "Indesit", "Candy", "Whirlpool", "Haier", "Beko", "Ariston", "Zanussi"];
+const brands = ["Samsung", "LG", "Bosch", "Indesit", "Candy", "Whirlpool", "Haier", "Beko", "Ariston", "Zanussi", "Miele", "Ardo", "Siemens", "AEG", "Electrolux", "Gorenje", "Hotpoint", "Vestel"];
 
 
 
