@@ -171,18 +171,18 @@ export default function Index() {
             {services.map((s, i) => (
               <div
                 key={i}
-                className="relative group cursor-pointer rounded-2xl border border-white/8 bg-white/3 hover:bg-white/6 hover:border-[#ff5f1f]/40 transition-all duration-300 p-6 overflow-hidden"
+                className="relative group cursor-pointer rounded-2xl border border-white/8 bg-white/3 hover:bg-white/6 hover:border-[#ff5f1f]/40 transition-all duration-300 p-6 overflow-hidden flex flex-col"
               >
                 <div
                   className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   style={{ background: "radial-gradient(circle at 50% 0%, rgba(255,95,31,0.08) 0%, transparent 70%)" }}
                 />
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col flex-1">
                   <div className="w-12 h-12 rounded-xl bg-[#ff5f1f]/10 border border-[#ff5f1f]/20 flex items-center justify-center mb-4 group-hover:bg-[#ff5f1f]/20 transition-colors">
                     <Icon name={s.icon} size={22} className="text-[#ff5f1f]" />
                   </div>
                   <h3 className="font-oswald text-xl font-semibold mb-2">{s.title}</h3>
-                  <p className="text-white/50 text-sm leading-relaxed mb-5">{s.desc}</p>
+                  <p className="text-white/50 text-sm leading-relaxed mb-5 flex-1">{s.desc}</p>
                   <div className="flex items-center justify-between">
                     <span className="text-[#ff5f1f] font-bold text-lg">{s.price}</span>
                     <span className="text-white/30 text-sm flex items-center gap-1">
