@@ -76,11 +76,11 @@ export default function Index() {
             <span className="font-oswald text-lg font-bold tracking-wide">СТИРМАСТЕР</span>
           </div>
           <a
-            href="tel:+78001234567"
+            href="tel:+79131916828"
             className="flex items-center gap-2 bg-[#ff5f1f] hover:bg-[#e54e0e] transition-colors px-4 py-2 rounded-lg text-sm font-semibold text-white"
           >
             <Icon name="Phone" size={14} />
-            8 800 123-45-67
+            +7 913 191-68-28
           </a>
         </div>
       </nav>
@@ -127,7 +127,7 @@ export default function Index() {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="tel:+78001234567"
+                href="tel:+79131916828"
                 className="flex items-center justify-center gap-3 bg-[#ff5f1f] hover:bg-[#e54e0e] active:scale-95 transition-all px-8 py-4 rounded-xl text-white font-bold text-lg shadow-[0_0_40px_rgba(255,95,31,0.35)]"
               >
                 <Icon name="Phone" size={20} />
@@ -279,7 +279,7 @@ export default function Index() {
               </div>
             </div>
             <a
-              href="tel:+78001234567"
+              href="tel:+79131916828"
               className="flex-shrink-0 flex items-center gap-3 bg-[#ff5f1f] hover:bg-[#e54e0e] transition-colors px-7 py-4 rounded-xl font-bold text-white shadow-[0_0_30px_rgba(255,95,31,0.3)] whitespace-nowrap"
             >
               <Icon name="Phone" size={18} />
@@ -324,11 +324,11 @@ export default function Index() {
             Звоните прямо сейчас. Мастер приедет в течение часа. Диагностика бесплатно.
           </p>
           <a
-            href="tel:+78001234567"
+            href="tel:+79131916828"
             className="inline-flex items-center gap-3 bg-[#ff5f1f] hover:bg-[#e54e0e] active:scale-95 transition-all px-10 py-5 rounded-xl text-white font-bold text-xl shadow-[0_0_60px_rgba(255,95,31,0.4)]"
           >
             <Icon name="Phone" size={22} />
-            8 800 123-45-67
+            +7 913 191-68-28
           </a>
           <p className="text-white/30 text-sm mt-4">Звонок бесплатный · Работаем без выходных</p>
         </div>
