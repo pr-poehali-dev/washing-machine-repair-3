@@ -27,9 +27,11 @@ export default function Admin() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
-      const data = await res.json();
+      const raw = await res.text();
+      const data = typeof raw === "string" ? JSON.parse(raw) : raw;
       if (res.ok) {
-        setRequests(data.requests);
+        const list = typeof data === "string" ? JSON.parse(data) : data;
+        setRequests(list.requests ?? list);
       } else {
         setError("Неверный пароль");
       }
@@ -47,8 +49,10 @@ export default function Admin() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ password }),
       });
-      const data = await res.json();
-      if (res.ok) setRequests(data.requests);
+      const raw = await res.text();
+      const data = typeof raw === "string" ? JSON.parse(raw) : raw;
+      const list = typeof data === "string" ? JSON.parse(data) : data;
+      if (res.ok) setRequests(list.requests ?? list);
     } catch (_) {
       setLoading(false);
     }
