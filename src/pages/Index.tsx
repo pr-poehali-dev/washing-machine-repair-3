@@ -123,9 +123,24 @@ export default function Index() {
               МАШИН
             </h1>
 
-            <p className="text-white/60 text-lg mb-10 leading-relaxed">
-              Профессиональный ремонт любых марок. Диагностика бесплатно при заказе ремонта. Гарантия на все работы.
+            <p className="text-white/70 text-xl md:text-2xl font-medium mb-4 leading-snug">
+              Назову причину и цену — за 2 минуты.<br />
+              <span className="text-[#ff5f1f]">80% ремонтов — прямо на месте, за 30 минут.</span>
             </p>
+
+            <div className="flex flex-wrap gap-3 mb-10">
+              {[
+                { icon: "ShieldCheck", text: "Гарантия 12 мес" },
+                { icon: "Wrench", text: "Аккуратный разбор" },
+                { icon: "BadgeDollarSign", text: "Фиксированная цена" },
+                { icon: "MessageCircle", text: "Консультация бесплатно" },
+              ].map(({ icon, text }) => (
+                <div key={text} className="flex items-center gap-1.5 bg-white/5 border border-white/10 rounded-full px-3 py-1.5 text-sm text-white/70">
+                  <Icon name={icon} size={14} className="text-[#ff5f1f]" />
+                  {text}
+                </div>
+              ))}
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <a
